@@ -1,5 +1,3 @@
-/* General Reset */
-/* General Reset */
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
 
 /* Card Styles */
@@ -26,6 +25,7 @@ body {
   transition: 1s;
   cursor: pointer;
   transform-style: preserve-3d;
+  display: flex;
 }
 
 .card.flipped .outside {
