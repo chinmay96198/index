@@ -7,9 +7,10 @@
 }
 
 body {
-  background-color:skyblue;
+  background-color: #fdbf00;
 }
 
+/* Card */
 .card {
   width: 640px;
   height: 400px;
@@ -84,7 +85,7 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  border: 10px solid white;
+  border: 10px solid #f8a5b8;
   border-radius: 15px;
 }
 
@@ -174,7 +175,58 @@ body {
   line-height: 120px;
 }
 
+/* Cat emoji style */
 .cat-emoji {
   font-size: 50px; /* Adjust size */
   margin-top: 20px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Let the height adjust automatically */
+  }
+
+  .outside,
+  .inside {
+    width: 100%;
+  }
+
+  .inside {
+    padding: 20px;
+  }
+
+  .front p {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .cake {
+    bottom: 20px;
+  }
+
+  .top-layer,
+  .middle-layer,
+  .bottom-layer {
+    width: 180px; /* Reduce cake size */
+    height: 60px;
+  }
+
+  .cat-emoji {
+    font-size: 40px; /* Adjust cat emoji size */
+  }
+
+  .inside h1 {
+    font-size: 60px; /* Adjust birthday emoji size */
+  }
+
+  .photo-frame {
+    padding: 10px;
+  }
+
+  .photo-frame img {
+    max-width: 90%;
+    max-height: 90%;
+  }
 }
