@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: skyblue;
+  background-color: skyblue; /* Set body color */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,6 @@ body {
   overflow: hidden;
 }
 
-/* Card Styles */
 .card {
   width: 640px;
   height: 400px;
@@ -177,14 +176,14 @@ body {
 }
 
 .cat-emoji {
-  font-size: 50px; /* Adjust size */
+  font-size: 50px;
   margin-top: 20px;
 }
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
   body {
-    overflow: auto; /* Allow overflow if necessary */
+    overflow: auto;
   }
 
   .card {
