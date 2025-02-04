@@ -1,4 +1,4 @@
-* * {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -21,9 +21,9 @@ body {
   position: relative;
   margin: auto;
   perspective: 1200px;
-  transition: transform 1s;
-  cursor: pointer;
   transform-style: preserve-3d;
+  cursor: pointer;
+  transition: transform 1s;
 }
 
 .card.flipped {
@@ -41,9 +41,37 @@ body {
 }
 
 .outside {
-  background-color: #ffffff;
   transform-style: preserve-3d;
-  z-index: 1;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.front p {
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 6px;
+  color: #000046;
+}
+
+.back {
+  background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+  transform: rotateY(180deg);
 }
 
 .inside {
@@ -58,21 +86,14 @@ body {
   transform: rotateY(180deg);
 }
 
-.front,
-.back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
+.inside p {
+  font-size: 18px;
+  color: #333;
 }
 
-.front {
-  background-color: #ffffff;
-}
-
-.back {
-  transform: rotateY(180deg);
-  background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+.inside h1 {
+  font-size: 120px;
+  line-height: 120px;
 }
 
 /* Photo frame styles */
@@ -160,25 +181,6 @@ body {
   left: -1px;
 }
 
-.outside p {
-  font-size: 23px;
-  text-transform: uppercase;
-  margin-top: 30px;
-  text-align: center;
-  letter-spacing: 6px;
-  color: #000046;
-}
-
-.inside h1 {
-  font-size: 120px;
-  line-height: 120px;
-}
-
-.cat-emoji {
-  font-size: 50px;
-  margin-top: 20px;
-}
-
 /* Mobile styling */
 @media (max-width: 768px) {
   body {
@@ -188,17 +190,7 @@ body {
   .card {
     width: 90%;
     height: auto;
-    min-height: 400px; /* Ensure a minimum height for smaller screens */
-  }
-
-  .outside,
-  .inside {
-    width: 100%;
-    height: 100%;
-  }
-
-  .inside {
-    padding: 10px;
+    min-height: 400px;
   }
 
   .front p {
@@ -215,10 +207,6 @@ body {
   .bottom-layer {
     width: 180px;
     height: 60px;
-  }
-
-  .cat-emoji {
-    font-size: 40px;
   }
 
   .inside h1 {
