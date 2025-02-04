@@ -1,4 +1,5 @@
 /* General Reset */
+/* General Reset */
 * {
   padding: 0;
   margin: 0;
@@ -7,23 +8,24 @@
 }
 
 body {
-  background-color: #fdbf00;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Card */
+/* Card Styles */
 .card {
   width: 640px;
   height: 400px;
-  position: absolute;
+  position: relative;
   margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   -webkit-perspective: 1200px;
   perspective: 1200px;
   transition: 1s;
   cursor: pointer;
+  transform-style: preserve-3d;
 }
 
 .card.flipped .outside {
@@ -51,7 +53,6 @@ body {
 }
 
 .outside {
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   z-index: 1;
   transform-origin: left;
@@ -63,7 +64,6 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -85,7 +85,7 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  border: 10px solid #f8a5b8;
+  border: 10px solid white;
   border-radius: 15px;
 }
 
@@ -175,7 +175,6 @@ body {
   line-height: 120px;
 }
 
-/* Cat emoji style */
 .cat-emoji {
   font-size: 50px; /* Adjust size */
   margin-top: 20px;
