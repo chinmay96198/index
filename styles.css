@@ -12,6 +12,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  overflow: hidden;
 }
 
 /* Card Styles */
@@ -182,23 +183,28 @@ body {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
+  body {
+    overflow: auto; /* Allow overflow if necessary */
+  }
+
   .card {
-    width: 90%; /* Adjust width for smaller screens */
-    height: auto; /* Let the height adjust automatically */
+    width: 90%;
+    height: auto;
   }
 
   .outside,
   .inside {
     width: 100%;
+    height: 100%;
   }
 
   .inside {
-    padding: 20px;
+    padding: 10px;
   }
 
   .front p {
-    font-size: 18px;
-    letter-spacing: 2px;
+    font-size: 16px;
+    letter-spacing: 3px;
   }
 
   .cake {
@@ -208,16 +214,16 @@ body {
   .top-layer,
   .middle-layer,
   .bottom-layer {
-    width: 180px; /* Reduce cake size */
+    width: 180px;
     height: 60px;
   }
 
   .cat-emoji {
-    font-size: 40px; /* Adjust cat emoji size */
+    font-size: 40px;
   }
 
   .inside h1 {
-    font-size: 60px; /* Adjust birthday emoji size */
+    font-size: 60px;
   }
 
   .photo-frame {
