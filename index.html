@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Card</title>
+    <!-- Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="card" onclick="flipCard()">
+      <div class="outside">
+        <div class="front">
+          <p>Happy Birthday</p>
+          <div class="cake">
+            <div class="top-layer"></div>
+            <div class="middle-layer"></div>
+            <div class="bottom-layer"></div>
+            <div class="candle"></div>
+          </div>
+        </div>
+        <div class="back">
+          <!-- Added photo frame inside the back of the card -->
+          <div class="photo-frame">
+            <img src="./884D0D41-A294-4852-9923-3F51E3A315CE.JPG" alt="Happy Birthday Photo" />
+          </div>
+        </div>
+      </div>
+      <div class="inside">
+        <p>sana çok mutlu bir doğum günü diliyorum, hayatta hak ettiğin tüm mutluluklara sahip olabilirsin</p>
+        <h1>&#127873;</h1>
+        <div class="cat-emoji">
+          🐱
+        </div>
+        <!-- Added the audio tag for birthday song -->
+        <audio id="birthday-song" src="./happy-birthday-to-you-piano-version-13976.mp3"></audio>
+      </div>
+    </div>
+
+    <script>
+      function flipCard() {
+        // Trigger flip animation
+        const card = document.querySelector('.card');
+        const song = document.getElementById('birthday-song');
+        
+        // Play the song
+        song.play();
+        
+        // Flip the card
+        card.classList.toggle('flipped');
+      }
+    </script>
+  </body>
+</html>
