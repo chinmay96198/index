@@ -1,4 +1,4 @@
-* {
+* * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -21,23 +21,29 @@ body {
   position: relative;
   margin: auto;
   perspective: 1200px;
-  transition: 1s;
+  transition: transform 1s;
   cursor: pointer;
   transform-style: preserve-3d;
 }
 
-.card.flipped .outside {
-  transform: rotateY(-180deg);
+.card.flipped {
+  transform: rotateY(180deg);
 }
 
 .outside,
 .inside {
-  height: 100%;
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   backface-visibility: hidden;
+}
+
+.outside {
+  background-color: #ffffff;
+  transform-style: preserve-3d;
+  z-index: 1;
 }
 
 .inside {
@@ -52,16 +58,10 @@ body {
   transform: rotateY(180deg);
 }
 
-.outside {
-  transform-style: preserve-3d;
-  z-index: 1;
-  transition: transform 1s;
-}
-
 .front,
 .back {
-  height: 100%;
   width: 100%;
+  height: 100%;
   position: absolute;
   backface-visibility: hidden;
 }
