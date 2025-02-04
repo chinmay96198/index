@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: skyblue; /* Fix background color */
+  background-color: skyblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,12 +20,10 @@ body {
   height: 400px;
   position: relative;
   margin: auto;
-  -webkit-perspective: 1200px;
   perspective: 1200px;
   transition: 1s;
   cursor: pointer;
   transform-style: preserve-3d;
-  display: flex;
 }
 
 .card.flipped .outside {
@@ -35,9 +33,11 @@ body {
 .outside,
 .inside {
   height: 100%;
-  width: 50%;
+  width: 100%;
   position: absolute;
-  left: 50.1%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
 }
 
 .inside {
@@ -49,14 +49,13 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  left: 50%;
+  transform: rotateY(180deg);
 }
 
 .outside {
   transform-style: preserve-3d;
   z-index: 1;
-  transform-origin: left;
-  transition: 2s;
+  transition: transform 1s;
 }
 
 .front,
@@ -180,7 +179,7 @@ body {
   margin-top: 20px;
 }
 
-/* Mobile styling: */
+/* Mobile styling */
 @media (max-width: 768px) {
   body {
     overflow: auto;
@@ -189,6 +188,7 @@ body {
   .card {
     width: 90%;
     height: auto;
+    min-height: 400px; /* Ensure a minimum height for smaller screens */
   }
 
   .outside,
@@ -223,6 +223,7 @@ body {
 
   .inside h1 {
     font-size: 60px;
+    line-height: 60px;
   }
 
   .photo-frame {
