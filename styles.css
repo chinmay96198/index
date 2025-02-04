@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: skyblue; /* Set body color */
+  background-color: skyblue; /* Fix background color */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,7 +180,7 @@ body {
   margin-top: 20px;
 }
 
-/* Media Query for Mobile Devices */
+/* Mobile styling: */
 @media (max-width: 768px) {
   body {
     overflow: auto;
